@@ -1,6 +1,6 @@
 'use client';
 
-import Image from "../../../public/images/icons/nav-logo.jpg";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const Logo = () => {
