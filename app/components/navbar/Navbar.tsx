@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from "../Container";
 
 
@@ -12,7 +11,7 @@ const Navbar = () => {
       "
     >
     <Container>
-      {/* <div 
+      <div 
         className="
           flex 
           flex-row 
@@ -20,12 +19,11 @@ const Navbar = () => {
           justify-between
           gap-3
           md:gap-0
-        "
-      >
-        <Logo />
-        <Search />
-        <UserMenu currentUser={currentUser} />
-      </div> */}
+        ">
+        {/* <Logo /> */}
+        {/* <Search /> */}
+        {/* <UserMenu currentUser={currentUser} /> */}
+      </div>
     </Container>
   </div>
   {/* <Categories /> */}
