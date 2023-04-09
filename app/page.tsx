@@ -1,6 +1,6 @@
 function Home() {
   return (
- <div>Ronald Aibnb!</div>
+ <div className="text-rose-500 text-2xl">Ronald Aibnb!</div>
 );
 };
 
