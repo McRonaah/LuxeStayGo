@@ -1,4 +1,3 @@
-
 function Home() {
   return (
  <div>Ronald Aibnb!</div>
