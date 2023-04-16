@@ -1,4 +1,5 @@
 'use client';
+
 import { BiSearch } from 'react-icons/bi';
 
 const Search = () => {
@@ -16,7 +17,7 @@ const Search = () => {
       transition 
       cursor-pointer
     "
-  >
+  >Any where
     <div 
       className="
         flex 
