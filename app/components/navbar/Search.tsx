@@ -17,7 +17,7 @@ const Search = () => {
       transition 
       cursor-pointer
     "
-  >Any where
+  >
     <div 
       className="
         flex 
@@ -26,16 +26,16 @@ const Search = () => {
         justify-between
       "
     >
-      {/* <div 
+      <div 
         className="
           text-sm 
           font-semibold 
           px-6
         "
       >
-        {locationLabel}
-      </div> */}
-      {/* <div 
+        Anywhere
+      </div>
+      <div 
         className="
           hidden 
           sm:block 
@@ -47,8 +47,8 @@ const Search = () => {
           text-center
         "
       >
-        {durationLabel}
-      </div> */}
+        Any week
+      </div>
       <div 
         className="
           text-sm 
@@ -60,8 +60,8 @@ const Search = () => {
           items-center 
           gap-3
         "
-      >
-        {/* <div className="hidden sm:block">{guestLabel}</div> */}
+      > 
+        <div className="hidden sm:block">Add Guest</div>
         <div 
           className="
             p-2 
