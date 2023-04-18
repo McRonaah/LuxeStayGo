@@ -71,6 +71,14 @@ const RegisterModal= () => {
         subtitle="Create an account!"
       />
       <Input
+        id="name"
+        label="Name"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
+      <Input
         id="email"
         label="Email"
         disabled={isLoading}
@@ -79,8 +87,8 @@ const RegisterModal= () => {
         required
       />
       <Input
-        id="name"
-        label="Name"
+        id="tel"
+        label="Phone Number"
         disabled={isLoading}
         register={register}
         errors={errors}
