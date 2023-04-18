@@ -5,7 +5,7 @@ import { AiFillGithub } from "react-icons/ai";
 // import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
-// import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { 
   FieldValues, 
   SubmitHandler,
@@ -18,7 +18,7 @@ import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
 import Input from "../inputs/Input";
 import Heading from "../Heading";
-// import Button from "../Button";
+import Button from "../Button";
 
 const RegisterModal= () => {
   const registerModal = useRegisterModal();
@@ -49,8 +49,8 @@ const RegisterModal= () => {
     //   loginModal.onOpen();
     })
     .catch((error) => {
-        console.log(error)
-    //   toast.error(error);
+        // console.log(error)
+      toast.error("Oops! It looks like there was an error. Please try again later.");
     })
     .finally(() => {
       setIsLoading(false);
@@ -107,42 +107,44 @@ const RegisterModal= () => {
     </div>
   )
 
-//   const footerContent = (
-//     <div className="flex flex-col gap-4 mt-3">
-//       <hr />
-//       <Button 
-//         outline 
-//         label="Continue with Google"
-//         icon={FcGoogle}
-//         onClick={() => signIn('google')} 
-//       />
-//       <Button 
-//         outline 
-//         label="Continue with Github"
-//         icon={AiFillGithub}
-//         onClick={() => signIn('github')}
-//       />
-//       <div 
-//         className="
-//           text-neutral-500 
-//           text-center 
-//           mt-4 
-//           font-light
-//         "
-//       >
-//         <p>Already have an account?
-//           <span 
-//             onClick={onToggle} 
-//             className="
-//               text-neutral-800
-//               cursor-pointer 
-//               hover:underline
-//             "
-//             > Log in</span>
-//         </p>
-//       </div>
-//     </div>
-//   )
+  const footerContent = (
+    <div className="flex flex-col gap-2 mt-3">
+      <hr />
+      <Button 
+        outline 
+        label="Continue with Google"
+        icon={FcGoogle}
+        // onClick={() => signIn('google')} 
+        onClick={() => {}}
+      />
+      <Button 
+        outline 
+        label="Continue with Github"
+        icon={AiFillGithub}
+        // onClick={() => signIn('github')}
+        onClick={() => {}}
+      />
+      <div 
+        className="
+          text-neutral-500 
+          text-center 
+          mt-4 
+          font-light
+        "
+      >
+        <p>Already have an account?
+          <span 
+            // onClick={onToggle} 
+            className="
+              text-neutral-800
+              cursor-pointer 
+              hover:underline
+            "
+            > Log in</span>
+        </p>
+      </div>
+    </div>
+  )
 
   return (
     <Modal
@@ -153,7 +155,7 @@ const RegisterModal= () => {
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
-    //   footer={footerContent}
+      footer={footerContent}
     />
   );
 }
