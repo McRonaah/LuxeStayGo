@@ -4,6 +4,8 @@ import Modal from "./Modal";
 
 import { useMemo, useState } from "react";
 
+import Heading from '../Heading';
+
 // import axios from 'axios';
 // import { toast } from 'react-hot-toast';
 // import { 
@@ -20,8 +22,6 @@ import { useMemo, useState } from "react";
 // import { categories } from '../navbar/Categories';
 // import ImageUpload from '../inputs/ImageUpload';
 // import Input from '../inputs/Input';
-// import Heading from '../Heading';
-
 enum STEPS {
   CATEGORY = 0,
   LOCATION = 1,
@@ -127,36 +127,36 @@ const RentModal = () => {
     return 'Back'
   }, [step]);
 
-//   let bodyContent = (
-//     <div className="flex flex-col gap-8">
-//       <Heading
-//         title="Which of these best describes your place?"
-//         subtitle="Pick a category"
-//       />
-//       <div 
-//         className="
-//           grid 
-//           grid-cols-1 
-//           md:grid-cols-2 
-//           gap-3
-//           max-h-[50vh]
-//           overflow-y-auto
-//         "
-//       >
-//         {categories.map((item) => (
-//           <div key={item.label} className="col-span-1">
-//             <CategoryInput
-//               onClick={(category) => 
-//                 setCustomValue('category', category)}
-//               selected={category === item.label}
-//               label={item.label}
-//               icon={item.icon}
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   )
+  let bodyContent = (
+    <div className="flex flex-col gap-8">
+      <Heading
+        title="Which of these best describes your place?"
+        subtitle="Pick a category"
+      />
+      <div 
+        className="
+          grid 
+          grid-cols-1 
+          md:grid-cols-2 
+          gap-3
+          max-h-[50vh]
+          overflow-y-auto
+        "
+      >
+        {/* {categories.map((item) => (
+          <div key={item.label} className="col-span-1">
+            <CategoryInput
+            //   onClick={(category) => 
+                // setCustomValue('category', category)}
+            //   selected={category === item.label}
+              label={item.label}
+              icon={item.icon}
+            />
+          </div>
+        ))} */}
+      </div>
+    </div>
+  )
 
 //   if (step === STEPS.LOCATION) {
 //     bodyContent = (
