@@ -12,7 +12,7 @@ import {
   useForm
 } from "react-hook-form";
 
-// import useLoginModal from "@/app/hooks/useLoginModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 import Modal from "./Modal";
@@ -22,7 +22,7 @@ import Button from "../Button";
 
 const RegisterModal= () => {
   const registerModal = useRegisterModal();
-//   const loginModal = useLoginModal();
+  const loginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
 
   const { 
@@ -45,9 +45,9 @@ const RegisterModal= () => {
 
     axios.post('/api/register', data)
     .then(() => {
-    //   toast.success('Registered!');
+      toast.success('Registered!');
       registerModal.onClose();
-    //   loginModal.onOpen();
+      loginModal.onOpen();
     })
     .catch((error) => {
         // console.log(error)
@@ -58,12 +58,12 @@ const RegisterModal= () => {
     })
   }
 
-//   const onToggle = useCallback(() => {
-//     registerModal.onClose();
-//     // loginModal.onOpen();
-//   }, []
-// //   [registerModal, loginModal]
-//   )
+  const toggle = useCallback(() => {
+    registerModal.onClose();
+    loginModal.onOpen();
+  }, 
+  [registerModal, loginModal]
+  )
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
@@ -87,14 +87,14 @@ const RegisterModal= () => {
         errors={errors}
         required
       />
-      <Input
+      {/* <Input
         id="tel"
         label="Phone Number"
         disabled={isLoading}
         register={register}
         errors={errors}
         required
-      />
+      /> */}
       <Input
         id="password"
         label="Password"
@@ -135,7 +135,7 @@ const RegisterModal= () => {
       >
         <p>Already have an account?
           <span 
-            // onClick={onToggle} 
+            onClick={toggle} 
             className="
               text-neutral-800
               cursor-pointer 

@@ -22,8 +22,10 @@ import Button from "../Button";
 
 const LoginModal = () => {
   const router = useRouter();
+
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
+
   const [isLoading, setIsLoading] = useState(false);
 
   const { 
@@ -34,7 +36,7 @@ const LoginModal = () => {
     },
   } = useForm<FieldValues>({
     defaultValues: {
-      name: '',
+      email: '',
       password: ''
     },
   });
@@ -110,7 +112,7 @@ const LoginModal = () => {
       />
       <div className="
       text-neutral-500 text-center mt-4 font-light">
-        <p>First time using Airbnb?
+        <p>First time using LuxeStayGo?
           <span 
             onClick={onToggle} 
             className="
