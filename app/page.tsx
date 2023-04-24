@@ -1,5 +1,6 @@
 import ClientOnly from "./components/ClientOnly";
 import Container from "@/app/components/Container";
+import EmptyState from "@/app/components/EmptyState";
 
 function Home() {
   const isEmpty = true;
@@ -7,7 +8,7 @@ function Home() {
   if (isEmpty) {
     return (
       <ClientOnly>
-        <EmptyState />
+        <EmptyState showReset />
       </ClientOnly>
     );
   }
