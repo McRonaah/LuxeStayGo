@@ -1,10 +1,10 @@
-import React from 'react'
-import { TbH1 } from 'react-icons/tb';
+export { default } from "next-auth/middleware"
 
-const middleware = () => {
-  return (
-    TbH1
-  )
-}
-
-export default middleware;
+export const config = { 
+  matcher: [
+    "/trips",
+    "/reservations",
+    "/properties",
+    "/favorites"
+  ]
+};
